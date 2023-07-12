@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {DogServiceService} from "./dog-service.service";
+import {DogService} from "./dog.service";
 import {Dog} from "./Dog";
 import {HttpErrorResponse} from "@angular/common/http";
 
@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
 
   public dogs: Dog[] = []
 
-  constructor(private dogServiceService: DogServiceService) {
+  constructor(private dogServiceService: DogService) {
   }
 
   ngOnInit(): void {

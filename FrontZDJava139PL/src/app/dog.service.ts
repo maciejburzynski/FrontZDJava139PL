@@ -6,7 +6,7 @@ import {Dog} from "./Dog";
 @Injectable({
   providedIn: 'root'
 })
-export class DogServiceService {
+export class DogService {
 
   constructor(private http: HttpClient) { }
 
