@@ -1,15 +1,18 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 <section id="team" class="team_area section-padding">
   <div class="container">
-    <h2 class="title_spectial">Take care of your own dog!</h2>
+    <h2 class="title_spectial">Find your own way!</h2>
     <div class="row text-center">
-      <div *ngFor="let dog of dogs" class="col-lg-2 col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUp;">
+      <div *ngFor="let address of addresses" class="col-lg-2 col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUp;">
         <div class="our-team">
           <div class="single-team">
-            <img src={{dog.photoUrl}} class="img-fluid" alt="">
-            <h3>{{dog.name}}</h3>
-            <p>{{dog.dogBreed}}</p>
-            <p>{{dog.price}} PLN</p>
+            <img src="https://v.wpimg.pl/NGJjMDQ4YSYrCDt3fk9sM2hQby04FmJlP0h3Zn4FfH96EmIiOFgrNS8aImo2Rjs3Kx09aiFYYSY6A2IyYBsqLjkaISUoGysqKA8pa2UGeX5zWX18fAx3dHhHeX1hDGMleQ4oaWgBLXMoCX1waQd-f2gX" class="img-fluid" alt="">
+            <h3>{{address.id}}</h3>
+            <p>{{address.street}}</p>
+            <p>{{address.streetNumber}} </p>
+            <p>{{address.zipCode}} </p>
+            <p>{{address.voivodeship}} </p>
+            <p>{{address.city}} </p>
           </div>
           <ul class="social">
             <li><a href="#" class="fa fa-facebook facebook"></a></li>

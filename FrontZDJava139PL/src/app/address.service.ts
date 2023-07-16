@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Dog} from "./Dog";
+import {Address} from "./Address";
 
 @Injectable({
   providedIn: 'root'
 })
-export class DogService {
+export class AddressService {
 
   constructor(private http: HttpClient) { }
 
-  public getDogs(): Observable<Dog[]> {
-    return this.http.get<Dog[]>('http://localhost:8080/api/dogs');
+  public getAddresses(): Observable<Address[]> {
+    return this.http.get<Address[]>('http://localhost:8080/api/addresses');
   }
 }

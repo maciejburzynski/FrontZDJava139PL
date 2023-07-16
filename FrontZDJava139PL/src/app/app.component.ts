@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {DogService} from "./dog.service";
-import {Dog} from "./Dog";
+import {AddressService} from "./address.service";
+import {Address} from "./Address";
 import {HttpErrorResponse} from "@angular/common/http";
 
 @Component({
@@ -11,22 +11,22 @@ import {HttpErrorResponse} from "@angular/common/http";
 export class AppComponent implements OnInit {
   title = 'FrontZDJava139PL';
 
-  public dogs: Dog[] = []
+  public addresses: Address[] = []
 
-  constructor(private dogServiceService: DogService) {
+  constructor(private addressService: AddressService) {
   }
 
   ngOnInit(): void {
-    this.getDogs();
+    this.getAddresses();
   }
 
 
-  private getDogs() {
-    this.dogServiceService.getDogs().subscribe(
-      (response: Dog[]) => {
+  private getAddresses() {
+    this.addressService.getAddresses().subscribe(
+      (response: Address[]) => {
         console.log("Success!");
         console.log(response);
-        this.dogs = response
+        this.addresses = response
       },
       (error: HttpErrorResponse) => {
         console.error(error.message)
